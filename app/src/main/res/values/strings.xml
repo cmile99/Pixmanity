@@ -8,4 +8,9 @@
 
     <string name="image_desc">Image description</string>
     <string name="or_text">OR</string>
+
+    <string name="name_hint">Name</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="register_btn_text">Register</string>
+    <string name="login_text"><u>ALREADY HAVE AN ACCOUNT? LOGIN</u></string>
 </resources>
