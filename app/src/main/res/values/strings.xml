@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Pixmanity</string>
+    <string name="log_in_text">Log In</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="login_button">Login</string>
+    <string name="sign_up_text"><u>DON\'T HAVE AN ACCOUNT? SIGN UP!</u></string>
+
+    <string name="image_desc">Image description</string>
+    <string name="or_text">OR</string>
+</resources>
