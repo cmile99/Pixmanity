@@ -37,6 +37,14 @@ public class MainActivity extends AppCompatActivity {
         googleLogin = findViewById(R.id.google_login);
         registerLink = findViewById(R.id.register_link);
 
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, ControlCenterActivity.class));
+
+            }
+        });
+
         registerLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

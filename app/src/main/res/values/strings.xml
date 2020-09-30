@@ -13,4 +13,11 @@
     <string name="confirm_password">Confirm Password</string>
     <string name="register_btn_text">Register</string>
     <string name="login_text"><u>ALREADY HAVE AN ACCOUNT? LOGIN</u></string>
+
+    <string name="home_text">Home</string>
+    <string name="account_text">Account</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="portfolio">Portfolio</string>
+    <string name="upcoming">Upcoming Events</string>
 </resources>
