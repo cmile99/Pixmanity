@@ -74,7 +74,18 @@ public class HomeFragment extends Fragment {
         portfolio.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         portfolio.setAdapter(new PortfolioAdapter(fillProjects()));
 
+        events = view.findViewById(R.id.events_view);
+        events.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+        events.setAdapter(new EventsAdapter(fillEvents()));
         return view;
+    }
+
+    private ArrayList<EventProject> fillEvents() {
+        ArrayList<EventProject> eventProjects = new ArrayList<>();
+        for (int i = 1; i < 6; i++) {
+            eventProjects.add(new EventProject("Event " + i, R.drawable.event_card_1, "10/" + i * 2));
+        }
+        return eventProjects;
     }
 
     private ArrayList<PortfolioProject> fillProjects() {
@@ -84,4 +95,5 @@ public class HomeFragment extends Fragment {
         }
         return projects;
     }
+
 }
