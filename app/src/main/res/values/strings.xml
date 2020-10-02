@@ -20,4 +20,10 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="portfolio">Portfolio</string>
     <string name="upcoming">Upcoming Events</string>
+
+    <string name="my_profile"><u>My Profile</u></string>
+    <string name="my_appointments"><u>My Appointments</u></string>
+    <string name="my_projects"><u>My Projects</u></string>
+    <string name="chat_support"><u>Chat\/Support</u></string>
+    <string name="share_app">Share Our App</string>
 </resources>

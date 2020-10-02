@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import java.util.ArrayList;
@@ -29,6 +30,11 @@ public class HomeFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
+    //View variables
+    private RecyclerView portfolio;
+    private RecyclerView events;
+    private ImageView bookAppointment;
+
     public HomeFragment() {
         // Required empty public constructor
     }
@@ -41,10 +47,6 @@ public class HomeFragment extends Fragment {
      * @param param2 Parameter 2.
      * @return A new instance of fragment HomeFragment.
      */
-    private RecyclerView portfolio;
-    private RecyclerView events;
-
-
 
     // TODO: Rename and change types and number of parameters
     public static HomeFragment newInstance(String param1, String param2) {
@@ -77,6 +79,9 @@ public class HomeFragment extends Fragment {
         events = view.findViewById(R.id.events_view);
         events.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         events.setAdapter(new EventsAdapter(fillEvents()));
+
+        bookAppointment = view.findViewById(R.id.new_appointment);
+
         return view;
     }
 

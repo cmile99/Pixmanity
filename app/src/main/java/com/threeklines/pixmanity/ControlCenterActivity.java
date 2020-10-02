@@ -24,6 +24,7 @@ public class ControlCenterActivity extends AppCompatActivity {
         frameLayout = findViewById(R.id.frame_layout);
 
         final HomeFragment homeFragment = new HomeFragment();
+        final AccountFragment accountFragment = new AccountFragment();
 
         setFragment(homeFragment);
 
@@ -33,6 +34,9 @@ public class ControlCenterActivity extends AppCompatActivity {
                 if (item.getItemId() == R.id.home_item) {
                     setFragment(homeFragment);
                     return true;
+                }
+                if (item.getItemId() == R.id.account_item) {
+                    setFragment(accountFragment);
                 }
                 return false;
             }
