@@ -21,9 +21,17 @@
     <string name="portfolio">Portfolio</string>
     <string name="upcoming">Upcoming Events</string>
 
-    <string name="my_profile"><u>My Profile</u></string>
-    <string name="my_appointments"><u>My Appointments</u></string>
-    <string name="my_projects"><u>My Projects</u></string>
-    <string name="chat_support"><u>Chat\/Support</u></string>
+    <string name="my_profile">My Profile</string>
+    <string name="my_appointments">My Appointments</string>
+    <string name="my_projects">My Projects</string>
+    <string name="chat_support">Chat\/Support</string>
     <string name="share_app">Share Our App</string>
+    <string name="profile_name">Name:</string>
+    <string name="profile_email">Email:</string>
+    <string name="profile_phone">Phone:</string>
+    <string name="profile_website">Website:</string>
+    <string name="profile_organisation">Organisation</string>
+    <string name="profile_bio">Bio:</string>
+
+
 </resources>

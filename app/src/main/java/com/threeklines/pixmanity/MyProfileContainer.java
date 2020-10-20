@@ -7,27 +7,30 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.FrameLayout;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class ControlCenterActivity extends AppCompatActivity {
+public class MyProfileContainer extends AppCompatActivity {
+    //View variables
 
     private BottomNavigationView bottomNavigationView;
-    private FrameLayout frameLayout;
+
+    //Member variables
+    HomeFragment homeFragment;
+    AccountFragment accountFragment;
+    MyProfile myProfile;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_control_center);
+        setContentView(R.layout.activity_my_profile_container);
 
-        bottomNavigationView = findViewById(R.id.bottom_nav_view);
-        frameLayout = findViewById(R.id.frame_layout);
+        bottomNavigationView = findViewById(R.id.profile_bot_nav);
+        myProfile = new MyProfile();
+        homeFragment = new HomeFragment();
+        accountFragment = new AccountFragment();
 
-        final HomeFragment homeFragment = new HomeFragment();
-        final AccountFragment accountFragment = new AccountFragment();
-
-        setFragment(homeFragment);
-
+        setFragment(myProfile);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -46,6 +49,6 @@ public class ControlCenterActivity extends AppCompatActivity {
 
     public void setFragment(Fragment fragment) {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.frame_layout, fragment).commit();
+        fragmentTransaction.replace(R.id.my_profile_frame, fragment).commit();
     }
 }

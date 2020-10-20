@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ControlCenterActivity"></activity>
+        <activity android:name=".MyProfileContainer"></activity>
+        <activity android:name=".ControlCenterActivity" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
