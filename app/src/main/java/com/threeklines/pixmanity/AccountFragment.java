@@ -87,6 +87,14 @@ public class AccountFragment extends Fragment {
                 startActivity(new Intent(getActivity(), MyProfileContainer.class));
             }
         });
+
+        myAppointments.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), MyAppointmentsContainer.class));
+            }
+        });
+
         return view;
     }
 

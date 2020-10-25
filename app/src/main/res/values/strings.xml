@@ -32,6 +32,14 @@
     <string name="profile_website">Website:</string>
     <string name="profile_organisation">Organisation</string>
     <string name="profile_bio">Bio:</string>
+    <string name="oppointment_name">Project Name:</string>
+    <string name="appointment_venue">Location/Venue:</string>
+    <string name="appointment_from">From:</string>
+    <string name="appointment_to">To:</string>
+    <string name="dummy_project_name">The Unknown</string>
+    <string name="dummy_venue">Pixmanity Studio</string>
+    <string name="dummy_start_time">1400hrs</string>
+    <string name="dummy_end_time">1730hrs</string>
 
 
 </resources>
