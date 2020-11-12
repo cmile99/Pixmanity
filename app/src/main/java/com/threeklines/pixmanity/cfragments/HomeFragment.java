@@ -1,4 +1,4 @@
-package com.threeklines.pixmanity;
+package com.threeklines.pixmanity.cfragments;
 
 import android.os.Bundle;
 
@@ -10,7 +10,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
+
+import com.threeklines.pixmanity.EventProject;
+import com.threeklines.pixmanity.EventsAdapter;
+import com.threeklines.pixmanity.PortfolioAdapter;
+import com.threeklines.pixmanity.PortfolioProject;
+import com.threeklines.pixmanity.R;
 
 import java.util.ArrayList;
 

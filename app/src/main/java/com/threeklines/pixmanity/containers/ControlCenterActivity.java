@@ -1,4 +1,4 @@
-package com.threeklines.pixmanity;
+package com.threeklines.pixmanity.containers;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,48 +10,45 @@ import android.view.MenuItem;
 import android.widget.FrameLayout;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.threeklines.pixmanity.cfragments.AccountFragment;
+import com.threeklines.pixmanity.cfragments.HomeFragment;
+import com.threeklines.pixmanity.R;
 
-public class MyAppointmentsContainer extends AppCompatActivity {
+public class ControlCenterActivity extends AppCompatActivity {
 
     private BottomNavigationView bottomNavigationView;
     private FrameLayout frameLayout;
-    MyAppointmentsFragment myAppointmentsFragment;
-    HomeFragment homeFragment;
-    AccountFragment accountFragment;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my_appointments_container);
+        setContentView(R.layout.activity_control_center);
 
-        bottomNavigationView = findViewById(R.id.my_appointments_nav);
-        frameLayout = findViewById(R.id.my_appointments_frame);
-        myAppointmentsFragment = new MyAppointmentsFragment();
-        setFragment(myAppointmentsFragment);
-        homeFragment = new HomeFragment();
-        accountFragment = new AccountFragment();
+        bottomNavigationView = findViewById(R.id.bottom_nav_view);
+        frameLayout = findViewById(R.id.frame_layout);
+
+        final HomeFragment homeFragment = new HomeFragment();
+        final AccountFragment accountFragment = new AccountFragment();
+
+        setFragment(homeFragment);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                if (item.getItemId() == R.id.account_item){
-                    setFragment(accountFragment);
-                    return true;
-                }
-                if (item.getItemId() == R.id.home_item){
+                if (item.getItemId() == R.id.home_item) {
                     setFragment(homeFragment);
                     return true;
+                }
+                if (item.getItemId() == R.id.account_item) {
+                    setFragment(accountFragment);
                 }
                 return false;
             }
         });
 
-
     }
 
     public void setFragment(Fragment fragment) {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.my_profile_frame, fragment).commit();
+        fragmentTransaction.replace(R.id.frame_layout, fragment).commit();
     }
 }

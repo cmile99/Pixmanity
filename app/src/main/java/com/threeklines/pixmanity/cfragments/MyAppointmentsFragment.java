@@ -1,22 +1,22 @@
-package com.threeklines.pixmanity;
+package com.threeklines.pixmanity.cfragments;
 
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
+
+import com.threeklines.pixmanity.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link MyProfile#newInstance} factory method to
+ * Use the {@link MyAppointmentsFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class MyProfile extends Fragment {
+public class MyAppointmentsFragment extends Fragment {
+
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -27,21 +27,9 @@ public class MyProfile extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    //View Variables
-    ImageView bookAppointment;
-    TextView profileName;
-    TextView profileEmail;
-    TextView profilePhone;
-    TextView profileWebsite;
-    TextView profileOrganisation;
-    TextView profileBio;
-    private FragmentTransaction fragmentTransaction;
-
-
-    public MyProfile() {
+    public MyAppointmentsFragment() {
         // Required empty public constructor
     }
-
 
     /**
      * Use this factory method to create a new instance of
@@ -49,11 +37,11 @@ public class MyProfile extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment MyProfile.
+     * @return A new instance of fragment MyAppointmentsFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static MyProfile newInstance(String param1, String param2) {
-        MyProfile fragment = new MyProfile();
+    public static MyAppointmentsFragment newInstance(String param1, String param2) {
+        MyAppointmentsFragment fragment = new MyAppointmentsFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -74,16 +62,7 @@ public class MyProfile extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_my_profile, container, false);
-
-        bookAppointment = view.findViewById(R.id.book_appointment);
-        profileName = view.findViewById(R.id.profile_name);
-        profileEmail = view.findViewById(R.id.profile_email);
-        profilePhone = view.findViewById(R.id.profile_phone);
-        profileWebsite = view.findViewById(R.id.profile_website);
-        profileOrganisation = view.findViewById(R.id.profile_org);
-        profileBio = view.findViewById(R.id.profile_bio);
-
+        View view = inflater.inflate(R.layout.fragment_my_appointments, container, false);
         return view;
     }
 }

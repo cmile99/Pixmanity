@@ -1,16 +1,20 @@
-package com.threeklines.pixmanity;
+package com.threeklines.pixmanity.cfragments;
 
 import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.threeklines.pixmanity.R;
+import com.threeklines.pixmanity.containers.MyAppointmentsContainer;
+import com.threeklines.pixmanity.containers.MyProfileContainer;
+import com.threeklines.pixmanity.containers.ProjectsDashContainer;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -92,6 +96,13 @@ public class AccountFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getActivity(), MyAppointmentsContainer.class));
+            }
+        });
+
+        myProjects.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), ProjectsDashContainer.class));
             }
         });
 

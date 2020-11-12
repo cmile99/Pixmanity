@@ -1,4 +1,4 @@
-package com.threeklines.pixmanity;
+package com.threeklines.pixmanity.containers;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,28 +9,29 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.threeklines.pixmanity.cfragments.AccountFragment;
+import com.threeklines.pixmanity.cfragments.HomeFragment;
+import com.threeklines.pixmanity.cfragments.ProjectsDashFragment;
+import com.threeklines.pixmanity.R;
 
-public class MyProfileContainer extends AppCompatActivity {
-    //View variables
+public class ProjectsDashContainer extends AppCompatActivity {
 
-    private BottomNavigationView bottomNavigationView;
-
-    //Member variables
+    BottomNavigationView bottomNavigationView;
     HomeFragment homeFragment;
     AccountFragment accountFragment;
-    MyProfile myProfile;
+    ProjectsDashFragment projectsDashFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my_profile_container);
-
-        bottomNavigationView = findViewById(R.id.profile_bot_nav);
-        myProfile = new MyProfile();
+        setContentView(R.layout.activity_projects_dash_container);
+        bottomNavigationView = findViewById(R.id.p_dash_nav);
         homeFragment = new HomeFragment();
         accountFragment = new AccountFragment();
+        projectsDashFragment = new ProjectsDashFragment();
 
-        setFragment(myProfile);
+
+        setFragment(projectsDashFragment);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -44,11 +45,10 @@ public class MyProfileContainer extends AppCompatActivity {
                 return false;
             }
         });
-
     }
 
-    public void setFragment(Fragment fragment) {
+public void setFragment(Fragment fragment) {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.my_profile_frame, fragment).commit();
-    }
+        fragmentTransaction.replace(R.id.p_frame_layout, fragment).commit();
+        }
 }
