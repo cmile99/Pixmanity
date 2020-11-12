@@ -51,6 +51,8 @@
     <string name="indoors_radio_text">Indoors</string>
     <string name="self_booked_text">Self Booked</string>
     <string name="house_booked_radio">House Booked</string>
+    <string name="continue_button_text">Continue</string>
+    <string name="venue_text">Venue:</string>
 
 
 </resources>
