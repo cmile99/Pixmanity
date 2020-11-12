@@ -1,5 +1,6 @@
 package com.threeklines.pixmanity.cfragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -16,6 +17,7 @@ import com.threeklines.pixmanity.EventsAdapter;
 import com.threeklines.pixmanity.PortfolioAdapter;
 import com.threeklines.pixmanity.PortfolioProject;
 import com.threeklines.pixmanity.R;
+import com.threeklines.pixmanity.containers.BookAppointmentContainer;
 
 import java.util.ArrayList;
 
@@ -86,6 +88,12 @@ public class HomeFragment extends Fragment {
         events.setAdapter(new EventsAdapter(fillEvents()));
 
         bookAppointment = view.findViewById(R.id.new_appointment);
+        bookAppointment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getContext(), BookAppointmentContainer.class));
+            }
+        });
 
         return view;
     }

@@ -12,27 +12,29 @@ import android.widget.FrameLayout;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.threeklines.pixmanity.R;
 import com.threeklines.pixmanity.cfragments.AccountFragment;
-import com.threeklines.pixmanity.cfragments.BookingPageOneFragment;
+import com.threeklines.pixmanity.cfragments.BookAppointmentPageTwoFragment;
 import com.threeklines.pixmanity.cfragments.HomeFragment;
 
-public class BookAppointmentContainer extends AppCompatActivity {
+public class BookAppointment2Container extends AppCompatActivity {
 
     FrameLayout frameLayout;
     BottomNavigationView bottomNavigationView;
     HomeFragment homeFragment;
     AccountFragment accountFragment;
-    BookingPageOneFragment bookingPageOneFragment;
+    BookAppointmentPageTwoFragment bookAppointmentPageTwoFragment;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_book_appointment_container);
-        frameLayout = findViewById(R.id.booking_frame1);
-        bottomNavigationView = findViewById(R.id.booking_one_nav);
+        setContentView(R.layout.activity_book_appointment2_container);
+
+        frameLayout = findViewById(R.id.booking_2_frame);
+        bottomNavigationView = findViewById(R.id.booking_2_nav);
         homeFragment = new HomeFragment();
         accountFragment = new AccountFragment();
-        bookingPageOneFragment = new BookingPageOneFragment();
+        bookAppointmentPageTwoFragment = new BookAppointmentPageTwoFragment();
 
-        setFragment(bookingPageOneFragment);
+        setFragment(bookAppointmentPageTwoFragment);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -49,11 +51,10 @@ public class BookAppointmentContainer extends AppCompatActivity {
             }
         });
 
-
     }
 
     private void setFragment(Fragment fragment){
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.booking_frame1,fragment).commit();
+        transaction.replace(R.id.booking_2_frame,fragment).commit();
     }
 }

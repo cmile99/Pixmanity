@@ -41,7 +41,7 @@
     <string name="dummy_start_time">1400hrs</string>
     <string name="dummy_end_time">1730hrs</string>
     <string name="appointment_time">Time:</string>
-    <string name="more_appoinment_details">More Details ...</string>
+    <string name="more_appoinment_details">More Details …</string>
     <string name="projects_progress">Projects In Projects</string>
     <string name="completed_projects_">Complete Projects</string>
     <string name="booking_heading_1">Book Appointment 1/2</string>
@@ -53,6 +53,15 @@
     <string name="house_booked_radio">House Booked</string>
     <string name="continue_button_text">Continue</string>
     <string name="venue_text">Venue:</string>
+    <string name="book_appointment_header_text2">Book Appointment 2/2</string>
+    <string name="setting_type_text">Setting Type:</string>
+    <string name="green_screen_radio_text">Green Screen</string>
+    <string name="staged_radio_text">Staged</string>
+    <string name="additional_items_text"><u>Additional Options</u></string>
+    <string name="make_up_check_box_text">Make Up</string>
+    <string name="models_check_box_text">Models</string>
+    <string name="costumes_check_box_text" >Costumes</string>
+    <string name="book_bt_txt">Book Appointment</string>
 
 
 </resources>
