@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".containers.ProjectsDashContainer"></activity>
+        <activity android:name=".containers.BookAppointmentContainer"></activity>
+        <activity android:name=".containers.CompletedProjectsContainer" />
+        <activity android:name=".containers.ProjectsDashContainer" />
         <activity android:name=".containers.MyAppointmentsContainer" />
         <activity android:name=".containers.MyProfileContainer" />
         <activity android:name=".containers.ControlCenterActivity" />

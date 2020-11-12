@@ -1,43 +1,44 @@
 package com.threeklines.pixmanity.cfragments;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
 
+import com.threeklines.pixmanity.PortfolioAdapter;
+import com.threeklines.pixmanity.PortfolioProject;
 import com.threeklines.pixmanity.R;
-import com.threeklines.pixmanity.containers.CompletedProjectsContainer;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link ProjectsDashFragment#newInstance} factory method to
+ * Use the {@link CompletedProjectsFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ProjectsDashFragment extends Fragment {
+public class CompletedProjectsFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
+
+    //View variables
+    RecyclerView completeProjects;
+    ImageView book;
+
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
-    //View variables
-    TextView projectsInProjects;
-    TextView completedProjects;
-    ImageView book;
-
-
-
-    public ProjectsDashFragment() {
+    public CompletedProjectsFragment() {
         // Required empty public constructor
     }
 
@@ -47,11 +48,11 @@ public class ProjectsDashFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment ProjectsDashFragment.
+     * @return A new instance of fragment CompletedProjectsFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ProjectsDashFragment newInstance(String param1, String param2) {
-        ProjectsDashFragment fragment = new ProjectsDashFragment();
+    public static CompletedProjectsFragment newInstance(String param1, String param2) {
+        CompletedProjectsFragment fragment = new CompletedProjectsFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -71,19 +72,23 @@ public class ProjectsDashFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_projects_dash, container, false);
-        projectsInProjects = view.findViewById(R.id.p_inProgress);
-        completedProjects = view.findViewById(R.id.p_completed);
-        book = view.findViewById(R.id.book7);
+        View view = inflater.inflate(R.layout.fragment_completed_projects, container, false);
+        completeProjects = view.findViewById(R.id.completed_list);
+        book = view.findViewById(R.id.completed_book);
 
-        completedProjects.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getContext(), CompletedProjectsContainer.class));
-            }
-        });
-
+        completeProjects.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
+        completeProjects.setAdapter(new PortfolioAdapter(fillProjects()));
         return view;
     }
+
+    private ArrayList<PortfolioProject> fillProjects() {
+        ArrayList<PortfolioProject> projects = new ArrayList<>();
+        for (int i = 1; i < 6; i++) {
+            projects.add(new PortfolioProject("Project " + i, R.drawable.home_background_3, new ArrayList<Integer>()));
+        }
+        return projects;
+    }
+
 }
