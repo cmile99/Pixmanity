@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.threeklines.pixmanity.R;
+import com.threeklines.pixmanity.containers.ChatSupportContainer;
 import com.threeklines.pixmanity.containers.MyAppointmentsContainer;
 import com.threeklines.pixmanity.containers.MyProfileContainer;
 import com.threeklines.pixmanity.containers.ProjectsDashContainer;
@@ -103,6 +104,13 @@ public class AccountFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getActivity(), ProjectsDashContainer.class));
+            }
+        });
+
+        chatSupport.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getContext(), ChatSupportContainer.class));
             }
         });
 

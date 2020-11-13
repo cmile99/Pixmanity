@@ -60,8 +60,15 @@
     <string name="additional_items_text"><u>Additional Options</u></string>
     <string name="make_up_check_box_text">Make Up</string>
     <string name="models_check_box_text">Models</string>
-    <string name="costumes_check_box_text" >Costumes</string>
+    <string name="costumes_check_box_text">Costumes</string>
     <string name="book_bt_txt">Book Appointment</string>
+    <string name="coming_soon_text">Chat/Support Is Coming Soon</string>
+    <string name="contact_us_text">Contact Us</string>
+    <string name="pix_phone">+26372789345</string>
+    <string name="pix_mail">info@pixmainty.com</string>
+    <string name="pix_facebook_handle">"Pixmanity "</string>
+    <string name="pix_twitter_handle">\@pixmanity_insanity</string>
+
 
 
 </resources>
