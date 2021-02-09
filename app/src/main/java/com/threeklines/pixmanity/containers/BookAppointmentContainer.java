@@ -13,6 +13,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.threeklines.pixmanity.R;
 import com.threeklines.pixmanity.cfragments.AccountFragment;
 import com.threeklines.pixmanity.cfragments.BookingPageOneFragment;
+import com.threeklines.pixmanity.cfragments.FullBooking;
 import com.threeklines.pixmanity.cfragments.HomeFragment;
 
 public class BookAppointmentContainer extends AppCompatActivity {
@@ -22,6 +23,7 @@ public class BookAppointmentContainer extends AppCompatActivity {
     HomeFragment homeFragment;
     AccountFragment accountFragment;
     BookingPageOneFragment bookingPageOneFragment;
+    FullBooking fullBooking;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,8 +33,9 @@ public class BookAppointmentContainer extends AppCompatActivity {
         homeFragment = new HomeFragment();
         accountFragment = new AccountFragment();
         bookingPageOneFragment = new BookingPageOneFragment();
+        fullBooking = new FullBooking();
 
-        setFragment(bookingPageOneFragment);
+        setFragment(fullBooking);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override

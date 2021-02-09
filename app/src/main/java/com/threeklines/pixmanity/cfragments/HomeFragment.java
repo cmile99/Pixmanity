@@ -3,6 +3,8 @@ package com.threeklines.pixmanity.cfragments;
 import android.content.Intent;
 import android.os.Bundle;
 
+import android.widget.AdapterView;
+import android.widget.Toast;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -83,6 +85,8 @@ public class HomeFragment extends Fragment {
         portfolio.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         portfolio.setAdapter(new PortfolioAdapter(fillProjects()));
 
+
+
         events = view.findViewById(R.id.events_view);
         events.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         events.setAdapter(new EventsAdapter(fillEvents()));
@@ -112,6 +116,19 @@ public class HomeFragment extends Fragment {
             projects.add(new PortfolioProject("Project " + i, R.drawable.home_background_3, new ArrayList<Integer>()));
         }
         return projects;
+    }
+
+    class TheListener implements AdapterView.OnItemSelectedListener {
+
+        @Override
+        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+            Toast.makeText(getContext(), "Item number " + position+1 + "selected", Toast.LENGTH_LONG);
+        }
+
+        @Override
+        public void onNothingSelected(AdapterView<?> parent) {
+
+        }
     }
 
 }

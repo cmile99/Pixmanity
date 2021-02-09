@@ -44,7 +44,7 @@
     <string name="more_appoinment_details">More Details …</string>
     <string name="projects_progress">Projects In Projects</string>
     <string name="completed_projects_">Complete Projects</string>
-    <string name="booking_heading_1">Book Appointment 1/2</string>
+    <string name="booking_heading_1">Book Appointment</string>
     <string name="select_category_text">Category:</string>
     <string name="select_setting_text">Setting:</string>
     <string name="outdoor_setting_text">Outdoors</string>
